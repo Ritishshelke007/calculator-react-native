@@ -4,13 +4,7 @@
     "slug": "calculator-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#1C1C1C"
-    },
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -18,14 +12,12 @@
       "supportsTablet": true
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#1C1C1C"
-      },
       "package": "com.ritish.calculator"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "extra": {
+      "eas": {
+        "projectId": "a2d6c9cd-5508-4055-9c90-3ae09866e8ba"
+      }
     }
   }
 }

@@ -45,6 +45,20 @@ export const useCalculator = () => {
     }
   }, [currentNumber, justCalculated]);
 
+  const handlePercentage = useCallback(() => {
+    const current = parseFloat(currentNumber);
+    if (lastNumber && operation) {
+      // If we're in the middle of an operation, calculate percentage of the previous number
+      const previous = parseFloat(lastNumber);
+      const percentValue = (previous * current) / 100;
+      setCurrentNumber(percentValue.toString());
+    } else {
+      // Just convert current number to percentage
+      const percentValue = current / 100;
+      setCurrentNumber(percentValue.toString());
+    }
+  }, [currentNumber, lastNumber, operation]);
+
   const handleOperation = useCallback((op) => {
     setOperation(op);
     setLastNumber(currentNumber);
@@ -183,5 +197,6 @@ export const useCalculator = () => {
     calculate,
     loadFromHistory,
     clearHistory,
+    handlePercentage
   };
 };

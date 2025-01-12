@@ -12,6 +12,7 @@ export default function StandardCalculator() {
     clear,
     calculate,
     history,
+    handlePercentage
   } = useCalculator();
 
   const buttons = [
@@ -48,7 +49,7 @@ export default function StandardCalculator() {
                   else if (['+', '-', '*', '/'].includes(btn)) handleOperation(btn);
                   else if (btn === '=') calculate();
                   else if (btn === '±') handleNumber((parseFloat(currentNumber) * -1).toString());
-                  else if (btn === '%') handleNumber((parseFloat(currentNumber) / 100).toString());
+                  else if (btn === '%') handlePercentage();
                   else handleNumber(btn);
                 }}
               >
@@ -90,7 +91,7 @@ const styles = StyleSheet.create({
   buttons: {
     flex: 0.6,
     padding: 10,
-    marginBottom: 40, // Add margin for the signature text
+    marginBottom: 220, // Add margin for the signature text
   },
   row: {
     flexDirection: 'row',

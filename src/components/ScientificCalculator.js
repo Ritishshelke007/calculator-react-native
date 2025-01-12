@@ -12,6 +12,7 @@ export default function ScientificCalculator() {
     clear,
     calculate,
     handleScientific,
+    handlePercentage
   } = useCalculator();
 
   const scientificButtons = [
@@ -73,7 +74,7 @@ export default function ScientificCalculator() {
                     else if (['+', '-', '*', '/'].includes(btn)) handleOperation(btn);
                     else if (btn === '=') calculate();
                     else if (btn === '±') handleNumber((parseFloat(currentNumber) * -1).toString());
-                    else if (btn === '%') handleNumber((parseFloat(currentNumber) / 100).toString());
+                    else if (btn === '%') handlePercentage();
                     else handleNumber(btn);
                   }}
                 >
