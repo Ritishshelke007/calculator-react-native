@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "Calculator",
+    "slug": "calculator-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1C1C1C"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1C1C1C"
+      },
+      "package": "com.ritish.calculator"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
